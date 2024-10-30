@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
 	margin: 0;
@@ -21,6 +22,16 @@ $conversion-factor: 24px;
 	width: 100%;
 	padding-right: size(225px);
 	padding-left: size(225px);
+	@media screen and (max-width: 1050px) {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+
+@mixin second-container() {
+	width: 100%;
+	padding-right: size(405px);
+	padding-left: size(405px);
 	@media screen and (max-width: 1050px) {
 		padding-right: 20px;
 		padding-left: 20px;
@@ -227,17 +238,6 @@ nav {
 	background-color: white;
 	overflow: hidden;
 	z-index: 3;
-	&::before {
-		content: " ";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100vh;
-		opacity: 0.3;
-		background: #292418;
-		z-index: -2;
-	}
 	&.active {
 		height: max-content;
 		padding-top: size(20px);
@@ -500,6 +500,186 @@ nav {
 		}
 	}
 }
+
+.content {
+	@include second-container();
+	@include flex-col-start();
+	padding-top: size(40px);
+	margin-bottom: size(30px);
+	.content__title {
+		color: #292418;
+		font-size: size(27px);
+		font-family: Manrope;
+		font-weight: 600;
+		word-wrap: break-word;
+		margin-bottom: size(5px);
+	}
+	.content__span {
+		color: #67635b;
+		font-size: size(17px);
+		font-family: Manrope;
+		font-weight: 400;
+		word-wrap: break-word;
+		margin-bottom: size(30px);
+	}
+}
+.post {
+	width: 100%;
+	@include flex-col-start();
+	gap: size(7px);
+	padding-bottom: size(40px);
+	border-bottom: 1px #f2f2f2 solid;
+	margin-bottom: size(30px);
+	.post__top {
+		width: 100%;
+		@include flex-center();
+		.flex-center {
+			gap: size(15px);
+		}
+	}
+	.post__type {
+		@include flex-center();
+		justify-content: flex-start;
+		gap: size(10px);
+		img {
+			width: size(21px);
+			height: size(23px);
+		}
+		span {
+			color: #292418;
+			font-size: size(13px);
+			font-family: Manrope;
+			font-weight: 400;
+			word-wrap: break-word;
+		}
+	}
+	.post__profile {
+		@include flex-center();
+		gap: size(11px);
+		img {
+			width: size(24px);
+			height: size(24px);
+		}
+		span {
+			color: #292418;
+			font-size: size(13px);
+			font-family: Manrope;
+			font-weight: 600;
+			word-wrap: break-word;
+		}
+	}
+	.post__phone {
+		color: #292418;
+		font-size: size(13px);
+		font-family: Manrope;
+		font-weight: 400;
+		word-wrap: break-word;
+	}
+	.time {
+		text-align: right;
+		color: #67635b;
+		font-size: size(13px);
+		font-family: Manrope;
+		font-weight: 400;
+		word-wrap: break-word;
+	}
+	.post__title {
+		color: #292418;
+		font-size: size(21px);
+		font-family: Manrope;
+		font-weight: 600;
+		word-wrap: break-word;
+	}
+	.post__sub {
+		width: 100%;
+		color: #292418;
+		font-size: size(17px);
+		font-family: Manrope;
+		font-weight: 400;
+		line-height: 25px;
+		word-wrap: break-word;
+	}
+	.post__bottom {
+		width: 100%;
+		@include flex-center();
+		justify-content: flex-start;
+		gap: size(20px);
+	}
+	.post__location {
+		@include flex-center();
+		gap: size(13px);
+		img {
+			width: size(24px);
+			height: size(24px);
+		}
+		span {
+			color: #1f97cb;
+			font-size: size(13px);
+			font-family: Manrope;
+			font-weight: 400;
+			word-wrap: break-word;
+		}
+	}
+	.post__actions__container {
+		@include flex-center();
+		gap: size(20px);
+		img {
+			width: size(20px);
+			height: size(20px);
+			object-fit: contain;
+		}
+		span {
+			color: #94918b;
+			font-size: size(13px);
+			font-family: Manrope;
+			font-weight: 400;
+			word-wrap: break-word;
+		}
+	}
+	.post__actions {
+		@include flex-center();
+		gap: size(6px);
+		cursor: pointer;
+	}
+	.post__img {
+		width: max-content;
+		height: max-content;
+		max-width: 100%;
+		max-height: size(318px);
+	}
+	.post__span {
+		color: #292418;
+		font-size: size(13px);
+		font-family: Manrope;
+		font-weight: 400;
+		word-wrap: break-word;
+	}
+	.quote {
+		width: 100%;
+		text-align: center;
+		color: #ffdb4e;
+		font-size: size(100px);
+		font-family: PT Serif;
+		font-weight: 400;
+		word-wrap: break-word;
+	}
+	.post__quote__title {
+		width: 100%;
+		text-align: center;
+		color: #67635b;
+		font-size: size(21px);
+		font-family: PT Serif;
+		font-weight: 700;
+		word-wrap: break-word;
+	}
+	.quote__sub {
+		text-align: center;
+		color: #67635b;
+		font-family: PT Serif;
+		font-style: italic;
+	}
+}
+
 footer {
 	@include main-container();
 	width: 100vw;
