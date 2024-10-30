@@ -3,9 +3,11 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./style/main.css" />
-		<script src="./script/app.js"></script>
 		<link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" href="./style/main.css" />
+
+		<script src="./script/jquery-3.7.1.min.js" defer></script>
+		<script src="./script/app.js" defer></script>
 		<title>Document</title>
 	</head>
 	<body>
@@ -15,14 +17,55 @@
 					<img src="./assets/imgs/logo.png" alt="" />
 				</a>
 				<nav>
-					<a href="" class="nav__item">Нерудные</a>
+					<a href="" class="nav__item" data-sub="Нерудные">Нерудные</a>
 					<a href="" class="nav__item">Рынок</a>
 					<a href="" class="nav__item">Техника</a>
 					<a href="" class="nav__item">Ремзона</a>
 					<a href="" class="nav__item">Надзор</a>
 					<a href="" class="nav__item">Люди & Деньги</a>
 					<a href="" class="nav__item">О проекте</a>
-				</nav>
+				</nav>	
+			</div>
+
+			<div class="submenu" data-sub="Нерудные">
+				<div class="submenu__content">
+					<h4 class="submenu__title">Карьеры на карте</h4>
+					<div class="flex-col-start">
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-1.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Действующие карьеры</span>
+						</a>
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-2.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Продажа карьеров</span>
+						</a>
+					</div>
+				</div>
+				<div class="submenu__content">
+					<h4 class="submenu__title">Цены карьеров на карте</h4>
+					<div class="flex-col-start">
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-3.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Песок дешевый</span>
+						</a>
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-4.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Песок качественный</span>
+						</a>
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-5.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Щебень гранит</span>
+						</a>
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-6.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Щебень доломит</span>
+						</a>
+						<a href="" class="submenu__item">
+							<img src="./assets/imgs/submenu-7.png" alt="" class="submenu__icon" />
+							<span class="submenu__sub">Гравий</span>
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<div class="flex-stretch">
@@ -45,8 +88,19 @@
 				</div>
 				<div class="flex-stretch">
 					<div class="filter__dropdown">
-						<span class="current">Кому надо увидит</span>
-						<img src="./assets/icons/arrow-down.svg" alt="" class="arrow-down" />
+						<div class="filter__dropdown__title">
+							<span class="current">Кому надо увидит</span>
+							<img src="./assets/icons/arrow-down.svg" alt="" class="arrow-down" />
+						</div>
+						<div class="dropdown">
+							<div class="dropdown__item"><input type="checkbox" name="" id="check" class="custom-checkbox" /><label for="check">Новости карьеров</label></div>
+							<div class="dropdown__item"><input type="checkbox" name="" id="check" class="custom-checkbox" /><label for="check">Аналитика</label></div>
+							<div class="dropdown__item"><input type="checkbox" name="" id="check" class="custom-checkbox" /><label for="check">Заявки</label></div>
+							<div class="dropdown__item">
+								<input type="checkbox" name="" id="check" class="custom-checkbox" /><label for="check">Деловые предложения</label>
+							</div>
+							<div class="dropdown__item"><input type="checkbox" name="" id="check" class="custom-checkbox" /><label for="check">Новости карьеров</label></div>
+						</div>
 					</div>
 					<div class="filter__search">
 						<img src="./assets/icons/search.svg" alt="" class="search-icon" />
@@ -98,9 +152,9 @@
 					</li>
 					<li>
 						<div class="socmedia">
-							<a href="" class="socmedia__item"><img src="./assets/icons/soc-1.svg" alt=""></a>
-							<a href="" class="socmedia__item"><img src="./assets/icons/soc-2.svg" alt=""></a>
-							<a href="" class="socmedia__item"><img src="./assets/icons/soc-3.svg" alt=""></a>
+							<a href="" class="socmedia__item"><img src="./assets/icons/soc-1.svg" alt="" /></a>
+							<a href="" class="socmedia__item"><img src="./assets/icons/soc-2.svg" alt="" /></a>
+							<a href="" class="socmedia__item"><img src="./assets/icons/soc-3.svg" alt="" /></a>
 						</div>
 					</li>
 				</ul>
